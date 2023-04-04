@@ -1,365 +1,412 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Work Sans", sans-serif;
-}
-
-html {
-    font-size: 90.5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-/* ---------------- top manu ------ */
-
-/* Base styles */
-
-.tophade {
-    padding: 0 25rem;
-    height: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(90deg, #ef8747 20%, #ff6c23 100%);
+/* --------- top hader --------------------------------------------------------------------- */
+.topheader {
+  padding: 0 25rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(90deg, #ef8747 20%, #ff6c23 100%);
 }
 
 .topmanu {
-    display: flex;
-    gap: 1rem;
-    color: #fff;
-    list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  color: #fff;
+  list-style-type: none;
 }
 
 .topmanu a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .topso {
-    display: flex;
-    gap: 1rem;
-    color: #fff;
-    list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  color: #fff;
+  list-style-type: none;
 }
 
 .topso a {
-    color: #fff;
+  color: #fff;
 }
-
-.bothade {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 3rem;
-    background-color: #f8f8f8;
-}
-
-.botmanu {
-    display: flex;
-    gap: 1rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.botmanu a {
-    color: #333;
-    text-decoration: none;
-}
-
-.sidbaricon {
-    width: 1.5rem;
-    height: 1.5rem;
-    object-fit: contain;
-    margin-right: 1rem;
-}
-
-.logo {
-    flex-grow: 1;
-}
-
-.ads {
-    flex-shrink: 0;
-}
-
-.search {
-    flex-shrink: 0;
-    margin-right: 1rem;
-}
-
-/* Media queries */
 
 @media screen and (max-width: 768px) {
-    /* Reduce padding in tophade */
-    .tophade {
-        padding: 0 1rem;
-    }
-
-    /* Collapse topmanu and topso into a single row */
-    .topmanu,
-    .topso {
-        display: none;
-    }
-
-    .bothade {
-        justify-content: space-between;
-    }
-
-    .botmanu {
-        display: none;
-    }
-
-    .logo {
-        flex-grow: 0;
-        margin-right: auto;
-    }
-
-    .ads,
-    .search {
-        display: none;
-    }
+  .topheader {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Reduce padding in tophade */
-    .tophade {
-        padding: 0 5rem;
-    }
+@media only screen and (min-width: 768px) {
+  .topheader {
+    /* display: none; */
+    padding: 0 10rem;
+  }
+}
 
-    /* Reduce font size in topmanu and topso */
-    .topmanu,
-    .topso {
-        font-size: 0.8rem;
-    }
+@media only screen and (min-width: 992px) {
+  .topheader {
+    padding: 0 15rem;
+  }
+}
 
-    /* Reduce font size in botmanu */
-    .botmanu {
-        font-size: 0.8rem;
-    }
+@media only screen and (min-width: 1200px) {
+  .topheader {
+    padding: 0 25rem;
+  }
 }
 
 
-/* ---------------- mid manu ------ */
+/*  ---- mid hader ------------------------------------------------------------------------- */
 
-.midhade {
-    padding: 0 18%;
-    height: 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+.midheader {
+  padding: 0 5%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
 }
 
 .logo img {
-    flex-basis: 50%;
-    max-width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .ads img {
-    flex-basis: 50%;
-    max-width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
-    .midhade {
-        padding: 0 5%;
-        height: auto;
-        flex-wrap: wrap;
-    }
+  .ads img {
+    display: none;
+  }
+}
 
-    .logo img{
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+@media only screen and (min-width: 768px) {
+  .midheader {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .midheader {
+    padding: 0 15%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .midheader {
+    padding: 0 25rem;
+  }
 }
 
 
+/* --------- bot had ---------------------------------------------------------- */
 
-/* ---------------- bot manu ------ */
+.botheader {
+  padding: 0 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 3px 6px -6px black;
 
-.bothade {
-    padding:  0 25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 3px 6px -6px black;
+}
+
+.burger-icon,
+.search-icon {
+  display: flex;
+}
+
+.burger-icon img,
+.search-icon i {
+  height: 20px;
+  width: 20px;
+}
+
+.botmanu {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  padding: 0 0 1.5rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 3px 6px -6px black;
+}
+
+.botmanu a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.botmanu a:hover {
+  color: #ff6c23;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+  .burger-icon,
+  .search-icon {
+    display: none;
   }
+}
 
-  .burger-icon, .search-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-  }
-
-  .burger-icon img, .search-icon i {
-    height: 20px;
-    width: 20px;
+@media only screen and (min-width: 768px) {
+  .botheader {
+    padding: 0 10%;
   }
 
   .botmanu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 3px 6px -6px black;
+    display: flex;
   }
+}
 
-  .botmanu a {
-    display: block;
-    color: #000;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.5s ease;
-    margin: 0.5rem 0;
+@media only screen and (min-width: 992px) {
+  .botheader {
+    padding: 0 15%;
   }
+}
 
-  .botmanu a:hover {
-    color: #ff6c23;
-    opacity: 1;
-  }
-
-  @media screen and (min-width: 768px) {
-    .bothade {
-      padding: 1rem 3rem;
-      height: 4rem;
-    }
-
-    .botmanu {
-      display: flex;
-      flex-direction: row;
-      margin-top: 0;
-      padding: 0;
-      background-color: transparent;
-      box-shadow: none;
-    }
-
-    .botmanu a {
-      margin: 0 1rem;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .bothade {
-      padding: 1rem 25rem;
-      height: 4rem;
-    }
-  }
-/* -------------footer---------- */
-
-.botfoot{
+@media only screen and (min-width: 1200px) {
+  .botheader {
     padding: 0 25rem;
-    height: 3rem;
+  }
+}
+
+
+/* ============ min bolg ===========  */
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  width: 100%;
+}
+
+.dimng {
+  display: flex;
+
+}
+
+.dimng .sim {
+  padding-left: 5px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ================  2 ========== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px 20% 10px 20%;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 15px;
+  }
+}
+.container img {
+  width: 100%;
+  display: block;
+  transition: all 100ms ease-out;
+}
+
+/* ================= 3 ===================== */
+
+
+
+/* ---------- bot fut manu  - --- */
+.botfooter {
+  padding: 0 25rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0ded86b;
+  font-size: 12px;
+}
+
+.copy {
+  color: #50504a;
+}
+
+.fotmanu {
+  display: flex;
+  gap: 1rem;
+  color: #fff;
+  list-style-type: none;
+}
+
+.fotmanu a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .botfooter {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .botfooter {
+    padding: 0 10%;
+  }
+
+  .botmanu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #e0ded86b;
-    font-size: 12px;
-}
-.copy{
-    color: #50504a;
-}
-.fotmanu{
-    display: flex;
-    gap: 1rem;
-    color: #fff;
-    list-style-type: none;
-}
-.fotmanu a{
-    color: #000;
-    text-decoration: none;
-    
-    
+  }
 }
 
-
-/* ------- foot adout ------- */
-.foot{
-    height: 35rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #e0ded86b;
-    font-size: 12px;
+@media only screen and (min-width: 992px) {
+  .botfooter {
+    padding: 0 15%;
+  }
 }
 
+@media only screen and (min-width: 1200px) {
+  .botfooter {
+    padding: 0 25rem;
+  }
+}
 
-.about_text{
-    font-size: 14px;
-    font-weight:600;
-    padding-bottom: 25px;
+/*  abmow fot */
+
+.foot {
+  height: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0ded86b;
+  font-size: 12px;
 }
-.about img{
-    padding-bottom: 15px;
+
+.about_text {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 25px;
 }
-.about .text{
-    padding-bottom: 25px;
-    font-size: 14px;
-    line-height: 25px;
-    color: #424141;
+
+.about img {
+  padding-bottom: 15px;
+}
+
+.about .text {
+  padding-bottom: 25px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #424141;
 }
 
 .foot_social_icon {
-    display: flex;
-    gap: 1rem;
-    list-style-type: none;
-    color: #000;
-   
+  display: flex;
+  
+  gap: 1rem;
+  list-style-type: none;
+  color: #000;
+
 }
+
 .foot_social_icon a {
-    color: #000;
-    font-size: 25px;
-    padding-left: 10px;
+  color: #000;
+  font-size: 25px;
+  padding-left: 10px;
 }
 
-
-/* ------------- our picks and most popular  -------------------- */
-
-.our_text{
-    font-size: 14px;
-    font-weight:600;
-    padding-bottom: 30px;
+.our_text {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 30px;
 }
 
-.post h5{
-    font-size: 14px;
-    color: #272727;
-    margin-top: 15px;
-    margin-left: 20px;
-}
-.post samp{
-    font-size: 10px;
-    color: #949090;
+.post h5 {
+  font-size: 14px;
+  color: #272727;
+  margin-top: 15px;
+  margin-left: 20px;
 }
 
-.post1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding-bottom: 15px;
-}
-.post2{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding-bottom: 15px;
-}
-.post3{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding-bottom: 15px;
-}
-h5{
-    margin-left: 10px;
-}
-hr{
-    margin-bottom: 15px;
-    color: #fff;
+.post samp {
+  font-size: 10px;
+  color: #949090;
 }
 
+.post1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.post2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.post3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+h5 {
+  margin-left: 10px;
+}
+
+hr {
+  margin-bottom: 15px;
+  color: #fff;
+}
